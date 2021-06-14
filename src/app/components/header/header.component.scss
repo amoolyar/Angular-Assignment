@@ -1,0 +1,50 @@
+.navbar {
+    position:fixed;
+    width: 100%;
+    z-index: 1000;
+}
+.navbarScroll {
+    background: white;
+    box-shadow: 1px 1px 1px #ecdede;
+    height: 100px;
+}
+.nav-link {
+    font: 22px Open Sans;
+    font-family: Montserrat;
+    color: #222222;
+}
+.nav-link:hover {
+    color: #663399;
+    cursor: pointer;
+}
+.logo {
+    margin-top: -10px;
+}
+.btn-login {
+    box-shadow: 0px 0px 20px #00000033;
+    border: 2px solid #663399;
+    border-radius: 24px;
+    width: 100px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #663399;
+}
+.btn-getStarted {
+    background: transparent linear-gradient(90deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 24px;
+    box-shadow: 0px 0px 20px #00000033;
+    padding: 10px 25px;
+    margin-right: 20px;
+    color: #fff;
+    font-size: 16px;
+}
+.btn-login:hover, .btn-getStarted:hover {
+    background: #663399;
+    color: #fff;
+} 
+
+.pr {
+    padding: 0px 20px 20px 20px;
+}

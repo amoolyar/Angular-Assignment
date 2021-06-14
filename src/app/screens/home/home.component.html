@@ -1,0 +1,104 @@
+<div class="main">
+  <div class="bg1">
+    <div class="bg2">
+      <div>
+        <app-header></app-header>
+      </div>
+      <div class="row pt-10">
+        <div class="col">
+          <div class="tagLine1">
+            <p class="tagLineText1"> We make it Super <br> Simple</p>
+            <div class="line1"></div>
+            <img class="collect_img_video" src="../../../assets/images/collect_img-video.png">
+            <img class="accountingDots1" src="../../../assets/images/accounting_dots.svg">
+          </div>
+        </div>
+        <div class="col" style="padding: 5% 0% 0% 5%;">
+          <div class="row">
+            <div class="col">
+              <mat-card class="card1">
+                <mat-card-title class="text-center">Eligibility Calculator</mat-card-title>
+                <mat-card-content class="cardContent">
+                  <p class="subTitle">Monthly Income</p>
+                  <p class="sliderValue">{{monthlyIncomeSlider.value | currency:'INR':'symbol':'1.0-0'}}</p>
+                  <mat-slider id="monthlyIncomeSlider" #monthlyIncomeSlider (change)="monthlyIncomes($event)" 
+                  step="1" min="100000" max="300000" [value]="monthlyIncome"></mat-slider>
+                  <span class="limitValue">1,00,000</span><span class="limitValue" style="float: right;">3,00,000</span>
+                  <div class="space"></div>
+                  <p class="subTitle">Monthly Expense</p>
+                  <p class="sliderValue">{{monthlyExpenseSlider.value | currency:'INR':'symbol':'1.0-0'}}</p>
+                  <mat-slider id="monthlyExpenseSlider" #monthlyExpenseSlider (change)="monthlyExpenses($event)" 
+                  step="1" min="0" max="100000" [value]="monthlyExpense"></mat-slider>
+                  <div class="space"></div>
+                  <p class="subTitle">Repayment Tenure</p>
+                  <mat-form-field>
+                    <mat-select [(value)]="selected">
+                      <mat-option value="option1">3 months</mat-option>
+                      <mat-option value="option2">6 months</mat-option>
+                      <mat-option value="option3">1 year</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <div class="space"></div>
+                  <p class="subTitle2">Do you have any existing loans?
+                    <mat-slide-toggle></mat-slide-toggle>
+                  </p>
+                  <div class="space"></div>
+                  <p class="subTitle2">EMI of existing loan (optional)</p>
+                  <mat-form-field>
+                    <input matInput placeholder="Enter amount">
+                  </mat-form-field>
+                  <div class="space"></div>
+                </mat-card-content>
+              </mat-card>
+            </div>
+            <div class="col">
+              <mat-card class="card2">
+                <div class="space"></div>
+                <p class="card2-content">Loan Amount</p>
+                <p class="card2-value">&#8377; 1,00,000</p>
+                <div class="space"></div>
+                <p class="card2-content">Your EMI wil be</p>
+                <p class="card2-value">&#8377; 15,000</p>
+                <div class="space"></div>
+                <button class="getMoneyBtn">GET MONEY</button>
+                <div class="space"></div>
+              </mat-card>
+            </div>
+          </div>
+          <img class="accontingDots-card2" src="../../../assets/images/accounting_dots.svg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg3">
+    <div class="row">
+      <div class="col-8">
+        <div class="row">
+          <div class="col align">
+            <mat-card class="card3 p-3" *ngFor="let feature of FeatureSet1">
+              <img [src]="feature.imgUrl">
+              <p class="mt-4">{{feature.title}}</p>
+              <p class="card3-content-line2 text-secondary">{{feature.description}}</p>
+            </mat-card>
+          </div>
+          <div class="col mt-5">
+            <mat-card class="card3 p-3" *ngFor="let feature of FeatureSet2">
+              <img [src]="feature.imgUrl">
+              <p class="mt-4">{{feature.title}}</p>
+              <p class="card3-content-line2 text-secondary">{{feature.description}}</p>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="container3">
+          <p class="tagLine2"> Boost your business <br> with Open</p><br><br>
+          <div class="line2"></div>
+          <div class="space"></div>
+          <p class="tagLineText2">Get your hands on a term loan that’s <br> crafted for your business</p>
+          <button class="getOpenAccountBtn">Get an Open Account </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
